@@ -185,6 +185,9 @@ ifneq (,$(filter $(TARGET_PRODUCT), davinci davinciin phoenix phoenixin tucana t
 	CDEFINES += -DCONFIG_SND_SOC_TFA9874_FOR_DAVI
 endif
 
+ifneq (,$(filter $(TARGET_PRODUCT), sweet sweetin))
+	CDEFINES += -DCONFIG_SND_SOC_AWINIC_AW882XX
+endif
 
 KBUILD_CPPFLAGS += $(CDEFINES)
 

@@ -195,6 +195,10 @@ ifneq (,$(filter $(TARGET_PRODUCT), phoenix phoenixin tucana toco tocoin))
 	CDEFINES += -DCONFIG_SND_SOC_FOR_ULTRASOUND_PATH
 endif
 
+ifneq (,$(filter $(TARGET_PRODUCT), sweet sweetin))
+	CDEFINES += -DCONFIG_SND_SOC_AWINIC_AW882XX
+endif
+
 KBUILD_CPPFLAGS += $(CDEFINES)
 
 # Currently, for versions of gcc which support it, the kernel Makefile
